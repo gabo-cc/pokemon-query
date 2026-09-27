@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fff7ed;
+  --foreground: #292524;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--background);
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #ffedd5 0, transparent 35%),
+    radial-gradient(circle at bottom right, #fed7aa 0, transparent 30%),
+    #fffaf5;
+
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1,
+h2,
+h3 {
+  color: #292524;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+article {
+  background: rgba(255, 255, 255, 0.95);
+  color: #292524;
+  border-color: #fed7aa;
+}
+
+article:hover {
+  border-color: #fb923c;
+}
+
+/* =========================
+   SECCIONES DEL DETALLE
+========================= */
+
+section {
+  background: rgba(255, 255, 255, 0.96);
+  color: #292524;
+  border-color: #fed7aa;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff7ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fdba74;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fb923c;
 }
